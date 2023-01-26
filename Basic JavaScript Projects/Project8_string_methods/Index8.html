@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UFT-8">
+    </head>
+    <body>
+        <script src="main8.js"></script>
+
+        <!-- The paragraph with the id "Concatenate" is where the result of the "full_sentence()"will be displayed -->
+   <p id="Concatenate"></p>
+    <!--  when clicked calls the JavaScript function "full_sentence()" -->
+   <button onclick="full_sentence()">Click here for full sentence</button>
+
+    <!-- when clicked, calls the JavaScript function "slice_Method()" -->
+   <p id="Slice"></p>
+<!--  p with id "Slice" is where the result of the "slice_Method()" will be displayed -->
+   <button onclick="slice_Method()">Click here</button>
+   
+    
+
+<!-- P element with id numbers_to_string is where result of string_Method() wll be displayed-->
+<p id="Numbers_to_string"></p>
+<!-- String method()-->
+<button onclick="string_Method()">Click Here</button>
+<!-- P element with id demo, is where result of search() method will displayed-->
+<p id="demo"></p>
+<!--Discription of search method()-->
+<p> The search() Method search() searches a string for a value and returns the position of the first match: Cosole log
+    for string result</p>
+
+    
+  
+    
+    <p id="Upper"></p>
+
+    <p id="Precision"></p>
+    <button onclick="precision_Method()">Click here Please</button>
+
+    <script>
+        let text = "Mr. Blue has a blue house"
+            let position = text.search("Blue");
+
+            document.getElementById("demo").innerHTML = position;
+
+            
+    </script>
+
+<p>toUpperCase() converts a string to uppercase letters:</p>
+    <script>
+        let Cap = "Hello World!";
+            let result = text.toUpperCase();
+
+            document.getElementById("Upper").innerHTML = result;
+    </script>
+   
+<p>toFixed() converts a number to a string, rounded to a specified number of decimals: 5.56789</p>
+
+<p id="Fix"></p>
+
+<script>
+    let num = 5.56789;
+    let n = num.toFixed(); 
+
+    document.getElementById("Fix").innerHTML = n;
+</script>
+   
+ <!--The valueOf() method returns the primitive value of a string, does not change the original string, can be used to convert a string object into a string.-->
+    
+    </body>
+    </html>
