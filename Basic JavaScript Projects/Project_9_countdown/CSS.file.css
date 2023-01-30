@@ -1,0 +1,98 @@
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px; /* sets the max width of the container to 1000px */
+  position: relative;
+  margin: auto; /* centers the container horizontally */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  /* hides the images */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer; /* changes the cursor to a pointer when hovering over the buttons */
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px; /* adjusts the margin top to center the buttons vertically */
+  padding: 16px;
+  color: white; /* sets the color of the text inside the buttons to white */
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease; /* adds a transition effect when hovering over the buttons */
+  border-radius: 0 3px 3px 0;
+  user-select: none; /* disables text selection on the buttons */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* sets the background color of the buttons to a transparent black when hovering */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%; /* sets the width of the caption text to 100% of its container */
+  text-align: center; /* centers the caption text horizontally */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Style for the dots that indicate the current slide */
+.dot {
+cursor: pointer; /* Change the cursor to a pointer when mouse is over the dot */
+height: 15px; /* Set the height and width of the dots */
+width: 15px;
+margin: 0 2px; /* Add a margin of 0 2px around each dot */
+background-color: #bbb;
+border-radius: 50%; /* Make the dots circular */
+display: inline-block; /* Display the dots as inline blocks */
+transition: background-color 0.6s ease;/* Add a transition effect to the background color */
+}
+
+/* Style for the active dot and the dot when hovered over */
+.active, .dot:hover {
+ /*Set the background color to dark grey when active or hovered over */
+background-color: #717171;
+}
+
+/* Style for the fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+/* Keyframes for the fade animation */
+@keyframes fade {
+from {
+  opacity: .4 /*Start the animation with an opacity of 0.4 */
+}
+
+to {
+  opacity: 1 /* End the animation with an opacity of 1 */
+}
+}
