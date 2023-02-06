@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <meta charset="UTF-8">
+        <head> Loops And Arrays</head>
+        <script src="Main10.js" defer></script> <!--script links to Java script and defers so the page loads and the script does in the background-->
+
+            <body>
+                <p id="Loop"></p> <!-- id loop-->
+                <button onclick="Call_Loop()"> Click Here</button> <!--- on click calls Call_Loop function-->
+
+                <p>Find out how long the string is to the following text "So How Long Is This String?" </p>
+                <p id="Demo"></p> 
+
+                <p id="List_of_instruments"></p>
+                <button onclick="for_Loop()">Click here for a list of intruments</button>
+                
+                <p id="Array"></p>
+                <button onclick="array_Function()">Click here for an array</button>
+
+                <p id="Constant"></p>
+                <button onclick="constant_function()">Click here</button>
+                
+                <p>Call a function to return the value of pie:</p>
+                <p id="PIE"></p>
+
+                <p> This is the car i have :</p>
+                <p id="Car_Object"></p>
+                
+                <p>A loop with a break statement in the console log. </p>
+                
+
+                <script>
+                    let text = "So How Long is This String?";/*String created*/
+                    let length = text.length; /* length of string method created and connected to text, text.length*/
+
+                    document.getElementById("Demo").innerHTML=length; /* id demo in p element is where the length of string will be put*/
+
+                    function math_Function(){
+                        return Math.PI;// returns value of PI
+                    }
+
+                    document.getElementById("PIE").innerHTML= math_Function();//Returns value of pir in the id p elemnet of html "PIE"
+
+                    for (let i=0; i<10; i++) {
+                        if(i===5) {
+                            break;
+                           document.write(i);
+                        }
+                    }
+
+                    var ex = 15;
+                        document.write(ex);// global scope //
+                        {
+                            let be = 12;
+                            document.write( "<br>"+ ex); //Block scope 
+                        }
+                        document.write("<br>" + ex);// document write will not write let because it cannot be accessed 
+                </script>
+            </body>
+
+
+
+
+    </html>
