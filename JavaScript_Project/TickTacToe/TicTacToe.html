@@ -5,9 +5,7 @@
         <h1>THE TIC TAC TOE GAME</h1>
         <link rel="stylesheet" href="./css/game.css">
         <script src="./js/tictactoe.js"></script>
-        <audio src="./media/place.mp3"></audio>
-        <audio src="./media/tie.mp3"></audio>
-        <audio src="./media/winGame.mp3"></audio>
+ 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
@@ -16,6 +14,7 @@
     <body id="body">
         <!--This container is needed to overlay our canvas over our table.-->
             <div class="center-container">
+                <canvas id='win-lines' width='608'></canvas>
                 <!--Note: Canavas width and height must be set within the element.-->
                 <table>
                     <tr>

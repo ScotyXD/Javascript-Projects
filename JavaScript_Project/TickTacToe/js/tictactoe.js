@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
           }
 
           //This function places placement sound.
-          Audio('./media/place.mp3');
+          audio('media/place.mp3');
 
           //This condition checks to see if it is computer's turn.
           if (activePlayer === 'O') {
@@ -110,7 +110,7 @@ function placeXOrO(squareNumber) {
                } else if (selectedSquares.length >= 9) {
                     //This function plays the tie game
 
-                    Audio('./media/tie.mp3');
+                    audio('./media/tie.mp3');
                     //This function sets a .3 second timer before the resetGame is called.
                     setTimeout(function () { resetGame(); }, 1000);
                }
@@ -143,7 +143,7 @@ function disableClick() {
 //placement sound ('place)
 function audio(audioURL) {
      //We create a new audio object and we pass the path as a parameter.
-     let audio = new Audio(audioURL);
+     let audio = new audio(audioURL);
      //Play method plays our audio sound.
      audio.play();
      
