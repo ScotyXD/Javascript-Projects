@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
           }
 
           //This function places placement sound.
-          Audio('');
+          Audio('./media/place.mp3');
 
           //This condition checks to see if it is computer's turn.
           if (activePlayer === 'O') {
@@ -68,6 +68,8 @@ function placeXOrO(squareNumber) {
                }
           }
 
+          }
+
 
           // This function parses the selectedSquares array to search for win conditions.
           //drawWinLine function is called to draw line if condition is met.
@@ -87,7 +89,7 @@ function placeXOrO(squareNumber) {
                     drawWinLine(508, 50, 508, 558);
                } else if (arrayIncludes('6X', '4X', '2X')) {
                     drawWinLine(100, 508, 510, 90);
-               } else if (arrayIncludes('0O', '4X', '8X')) {
+               } else if (arrayIncludes('0O', '4O', '8O')) {
                     drawWinLine(100, 100, 520, 520);
                } else if (arrayIncludes('3O', '1O', '2O')) {
                     drawWinLine(50, 100, 558, 100);
@@ -108,7 +110,7 @@ function placeXOrO(squareNumber) {
                } else if (selectedSquares.length >= 9) {
                     //This function plays the tie game
 
-                    Audio('');
+                    Audio('./media/tie.mp3');
                     //This function sets a .3 second timer before the resetGame is called.
                     setTimeout(function () { resetGame(); }, 1000);
                }
@@ -127,7 +129,7 @@ function placeXOrO(squareNumber) {
                if (a === true && b === true && c === true) { return true; }
           }
      }
-}
+
 
 //This function makes our body element temporarily unclickable
 function disableClick() {
@@ -222,7 +224,7 @@ function clear() {
 //This line disallows clicking while the win sound is playing
 disableClick();
 //This line plays the win sounds.
-audio('');
+audio('./media/winGame.mp3');
 //This line calls our main animation loop
 animateLineDrawing();
 //This line waits 1 second.
