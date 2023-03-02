@@ -15,13 +15,13 @@ operator: null,
 
 
 // this modifies values each time a button is clicked
-function Input_Digit (digit) {
+function Input_Digit(digit) {
 const {Display_Value, Wait_Second_Operand} = Calculator; 
 // we are checking to see if Wait_Second_Operand is true and set
 // Display Value to the key that was clicked. 
 if (Wait_Second_Operand === true) {
-Calculator. Display_Value = digit;
-Calculator. Wait_Second_operand = false;
+Calculator.Display_Value = digit;
+Calculator.Wait_Second_Operand = false;
 
 } else {
 // this overwrites Display Value if the current value is 0
