@@ -22,7 +22,6 @@ const {Display_Value, Wait_Second_Operand} = Calculator;
 if (Wait_Second_Operand === true) {
 Calculator.Display_Value = digit;
 Calculator.Wait_Second_Operand = false;
-
 } else {
 // this overwrites Display Value if the current value is 0
 // otherwise it adds onto it
@@ -38,7 +37,7 @@ if (Calculator.Wait_Second_Operand === true) return;
 if (!Calculator. Display_Value.includes (dot)) { 
 // we are saying that if the Display_Value does not contain a decimal point
 // we want to add a decimal point
-Calculator. Display_Value += dot;
+Calculator.Display_Value += dot;
     }
 }
 
@@ -49,11 +48,11 @@ function Handle_Operator(Next_Operator) {
     //displayed on the screen to a number and then store the result in
     //Calculator. First operand if it doesn't already exist 
     const Value_of_Input = parseFloat(Display_Value);
-    //checks if an operator already exists and if wait_Second_Operand is true, //then updates the operator and exits from the function
+    //checks if an operator already exists and if wait_Second_Operand is true,
+    //then updates the operator and exits from the function
     if (operator && Calculator.Wait_Second_Operand) {
         Calculator.operator = Next_Operator;
         return;
-
     }
     if (First_Operand == null) {
         Calculator.First_Operand = Value_of_Input;
@@ -71,7 +70,7 @@ function Handle_Operator(Next_Operator) {
         Calculator.First_Operand = parseFloat(result);
 
     }
-    Calculator.Wait_Second_operand = true;
+    Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
     const Perform_Calculation = {
