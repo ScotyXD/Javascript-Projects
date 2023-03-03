@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
           }
 
           //This function places placement sound.
-          audio('media/place.mp3');
+          audio('./media/place.mp3');
 
           //This condition checks to see if it is computer's turn.
           if (activePlayer === 'O') {
@@ -130,7 +130,7 @@ function audio(audioURL) {
      //We create a new audio object and we pass the path as a parameter.
      let audio = new Audio(audioURL);
      //Play method plays our audio sound.
-     audio.play();
+     audio.play(audio);
      
 }
 
