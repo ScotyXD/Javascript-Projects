@@ -198,6 +198,7 @@ p {
     padding: 5px;
 }
 
+
 /*========================
 Contact STYLES
 ========================*/
@@ -343,6 +344,11 @@ Contact STYLES
 /*====================
 Light Box Conatiner
 =====================*/
+
+* {
+    box-sizing: border-box;
+}
+
 .row>.column {
     padding: 0 8px;
 }
@@ -378,9 +384,9 @@ Light Box Conatiner
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
+    padding: 0px;
+    width: 80%;
+    max-width: 300px;
 }
 
 /* The Close Button */
@@ -444,6 +450,10 @@ Light Box Conatiner
     top: 0;
 }
 
+img {
+    margin-bottom: -4px;
+}
+
 /* Caption text */
 .caption-container {
     text-align: center;
@@ -452,7 +462,7 @@ Light Box Conatiner
     color: white;
 }
 
-img.demo {
+.demo {
     opacity: 0.6;
 }
 
