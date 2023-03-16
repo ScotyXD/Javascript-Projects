@@ -21,6 +21,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -28,7 +29,6 @@ function showSlides(n) {
   var captionText = document.getElementById("caption");
   if (n > slides.length) { slideIndex = 1 }
   if (slideIndex < 1) { slideIndex = slides.length }
-
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
