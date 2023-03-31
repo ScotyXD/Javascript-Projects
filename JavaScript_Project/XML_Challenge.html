@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="XML_Demo"></p>
+<script>
+
+    var XML_Parser, XML_Document;
+        //This should create a text string
+
+        var Movie ="<movie>"+
+        "<title> Shazam! Fury Of The Gods</title>" +
+        "<starring> Zachary Levi </starring>" +
+        "<budget>$100-125 Million</budget>" +
+        "<review>Rotton tomatoes 54%</review>"
+        "</movie>";
+
+        //creates an XML DOM Parser
+        XML_Parser = new DOMParser();
+
+        // creates a new XML DOM object using the text string 
+        XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
+
+        document.getElementById("XML_Demo").innerHTML=
+        XML_Document.getElementsByTagName("title") [0].childNodes[0].nodeValue;
+
+        </script>
+
+    </body>
+</html>

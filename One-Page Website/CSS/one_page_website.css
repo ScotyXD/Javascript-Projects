@@ -199,7 +199,27 @@ p {
     padding: 5px;
 }
 
+/*************Key Frames Zoom***********************/
 
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.column img {
+    animation: zoominoutsinglefeatured 15s forwards;
+
+}
+/*******************************************/
 /*========================
 Contact STYLES
 ========================*/

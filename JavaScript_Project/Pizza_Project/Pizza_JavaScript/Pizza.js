@@ -64,3 +64,14 @@ function getTopping(runningTotal, text1) {
 };
 
 ///////////////////Get Topping ENd///////////////////////////
+
+
+
+/////////////////////POP UP FORM /////////////////////////////
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="Croco"></p>
+
+<script>
+    var croc = { name: "Jim", type: "salt water croc", color: "Green" }; 
+    var JSONstring = JSON.stringify(croc)
+    var parsedCroc=JSON.parse(JSONstring);
+    document.getElementById("Croco").innerHTML = parsedCroc.name +" the "+
+    parsedCroc.type;
+ </script>
+                          
+</body>
+                          
+</html>

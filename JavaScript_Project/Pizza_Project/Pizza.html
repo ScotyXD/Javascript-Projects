@@ -3,15 +3,74 @@
 <html lang="en">
 
 <head>
-
+<script type="text/javascript" src="/jquery/jquery-3.6.0.min.js"></script>
     <title>Pizza Drill Demo</title>
 
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="Pizza_JavaScript/Pizza.js" defer></script>
+
     <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css" />
 </head>
 <body>
+    <!--- FADE IN EFFECT ON LOAD-------->
+    <script>
+    document.body.classList.add('fade-out');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+    });
+    </script>
+    <!------------------------------------->
+
+    <!-----------------FORM VAILDATION FUNCTIONS---------->
+<script>
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            alert("Name and Number must be filled out");
+            return false;
+        }
+          let y = document.forms["myForm"]["number"].value;
+        if (y == "") {
+            alert("Name and Number must be filled out");
+            return false;
+    }
+}
+</script>
+<!---------------VALIDATION FORM--------------->
+    <h2>FILL OUT TO RECIEVE YOUR PIZZA!</h2>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        Number:<input type="text" name="number">
+        <input type="submit" value="Submit">
+    </form>
+
+<!--------------------------------------------->
+
+<!--------------------------POP UP FORM CONTAINER---------->
+<h2>BEEN HERE BEFORE?</h2>
+<p>Login Below!</p>
+
+
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
 <!----Pizza Menu Sizes & place order Button--------------------->
     <div id="menuBG">
 
@@ -68,6 +127,7 @@
                 <input class="toppings" type="checkbox" name="Topping" value="Sweetcorn">Sweetcorn<br>
                 <input class="toppings" type="checkbox" name="Topping" value="Pineapple">Pineapple<br>
 <!-------Veg Container END-------->
+
 
 
 <!--Cart Container-->
