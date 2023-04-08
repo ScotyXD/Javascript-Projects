@@ -1,5 +1,6 @@
 #JavaScript Projects Collection
-This repository contains a collection of JavaScript projects showcasing various skills and concepts in web development. The projects include a Tic Tac Toe game, a Pizza ordering system, a Calculator, a Portfolio project, and a folder containing various basic JavaScript examples.
+
+A collection of JavaScript projects showcasing various skills and concepts in web development. The projects include a Tic Tac Toe game, a Pizza ordering system, a Calculator, a Portfolio project, and a folder containing various basic JavaScript examples.
 
 Table of Contents
 Tic Tac Toe Project
